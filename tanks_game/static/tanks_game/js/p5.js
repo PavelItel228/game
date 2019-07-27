@@ -1676,7 +1676,7 @@
                 line: 209,
                 requires: ['core'],
                 description:
-                  '<p>This class describes a camera for use in p5&#39;s\n<a href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5">\nWebGL mode</a>. It contains camera position, orientation, and projection\ninformation necessary for rendering a 3D scene.</p>\n<p>New p5.Camera objects can be made through the\n<a href="#/p5/createCamera">createCamera()</a> function and controlled through\nthe methods described below. A camera created in this way will use a default\nposition in the scene and a default perspective projection until these\nproperties are changed through the various methods available. It is possible\nto create multiple cameras, in which case the current camera\ncan be set through the <a href="#/p5/setCamera">setCamera()</a> method.</p>\n<p>Note:\nThe methods below operate in two coordinate systems: the &#39;world&#39; coordinate\nsystem describe positions in terms of their relationship to the origin along\nthe X, Y and Z axes whereas the camera&#39;s &#39;local&#39; coordinate system\ndescribes positions from the camera&#39;s point of view: left-right, up-down,\nand forward-backward. The <a href="#/p5.Camera/move">move()</a> method,\nfor instance, moves the camera along its own axes, whereas the\n<a href="#/p5.Camera/setPosition">setPosition()</a>\nmethod sets the camera&#39;s position in world-space.</p>\n'
+                  '<p>This class describes a camera for use in p5&#39;s\n<a href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5">\nWebGL mode</a>. It contains camera position, orientation, and projection\ninformation necessary for rendering a 3D scene.</p>\n<p>New p5.Camera objects can be made through the\n<a href="#/p5/createCamera">createCamera()</a> function and controlled through\nthe methods described below. A camera created in this way will use a default\nposition in the scene and a default perspective projection until these\nproperties are changed through the various methods available. It is possible\nto create multiple cameras, in which case the current camera\ncan be set through the <a href="#/p5/setCamera">setCamera()</a> method.</p>\n<p>Note:\nThe methods below operate in two coordinate systems: the &#39;world&#39; coordinate\nsystem describe positions in terms of their relationship to the origin along\nthe X, Y and Z axes whereas the camera&#39;s &#39;local&#39; coordinate system\ndescribes positions from the camera&#39;s point of view: left-right, up-down,\nand forward-backward. The <a href="#/p5.Camera/draw">draw()</a> method,\nfor instance, moves the camera along its own axes, whereas the\n<a href="#/p5.Camera/setPosition">setPosition()</a>\nmethod sets the camera&#39;s position in world-space.</p>\n'
               },
               Shaders: {
                 name: 'Shaders',
@@ -2194,7 +2194,7 @@
                 file: 'src/webgl/p5.Camera.js',
                 line: 209,
                 description:
-                  '<p>This class describes a camera for use in p5&#39;s\n<a href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5">\nWebGL mode</a>. It contains camera position, orientation, and projection\ninformation necessary for rendering a 3D scene.</p>\n<p>New p5.Camera objects can be made through the\n<a href="#/p5/createCamera">createCamera()</a> function and controlled through\nthe methods described below. A camera created in this way will use a default\nposition in the scene and a default perspective projection until these\nproperties are changed through the various methods available. It is possible\nto create multiple cameras, in which case the current camera\ncan be set through the <a href="#/p5/setCamera">setCamera()</a> method.</p>\n<p>Note:\nThe methods below operate in two coordinate systems: the &#39;world&#39; coordinate\nsystem describe positions in terms of their relationship to the origin along\nthe X, Y and Z axes whereas the camera&#39;s &#39;local&#39; coordinate system\ndescribes positions from the camera&#39;s point of view: left-right, up-down,\nand forward-backward. The <a href="#/p5.Camera/move">move()</a> method,\nfor instance, moves the camera along its own axes, whereas the\n<a href="#/p5.Camera/setPosition">setPosition()</a>\nmethod sets the camera&#39;s position in world-space.</p>\n',
+                  '<p>This class describes a camera for use in p5&#39;s\n<a href="https://github.com/processing/p5.js/wiki/Getting-started-with-WebGL-in-p5">\nWebGL mode</a>. It contains camera position, orientation, and projection\ninformation necessary for rendering a 3D scene.</p>\n<p>New p5.Camera objects can be made through the\n<a href="#/p5/createCamera">createCamera()</a> function and controlled through\nthe methods described below. A camera created in this way will use a default\nposition in the scene and a default perspective projection until these\nproperties are changed through the various methods available. It is possible\nto create multiple cameras, in which case the current camera\ncan be set through the <a href="#/p5/setCamera">setCamera()</a> method.</p>\n<p>Note:\nThe methods below operate in two coordinate systems: the &#39;world&#39; coordinate\nsystem describe positions in terms of their relationship to the origin along\nthe X, Y and Z axes whereas the camera&#39;s &#39;local&#39; coordinate system\ndescribes positions from the camera&#39;s point of view: left-right, up-down,\nand forward-backward. The <a href="#/p5.Camera/draw">draw()</a> method,\nfor instance, moves the camera along its own axes, whereas the\n<a href="#/p5.Camera/setPosition">setPosition()</a>\nmethod sets the camera&#39;s position in world-space.</p>\n',
                 params: [
                   {
                     name: 'rendererGL',
@@ -5192,7 +5192,7 @@
                   '\n<div>\n<code>\nnoFill();\nstroke(255, 102, 0);\nline(85, 20, 10, 10);\nline(90, 90, 15, 80);\nstroke(0, 0, 0);\nbezier(85, 20, 10, 10, 90, 90, 15, 80);\n</code>\n</div>\n\n<div>\n<code>\nbackground(0, 0, 0);\nnoFill();\nstroke(255);\nbezier(250, 250, 0, 100, 100, 0, 100, 0, 0, 0, 100, 0);\n</code>\n</div>'
                 ],
                 alt:
-                  'stretched black s-shape in center with orange lines extending from end points.\nstretched black s-shape with 10 5x5 white ellipses along the shape.\nstretched black s-shape with 7 5x5 ellipses and orange lines along the shape.\nstretched black s-shape with 17 small orange lines extending from under shape.\nhorseshoe shape with orange ends facing left and black curved center.\nhorseshoe shape with orange ends facing left and black curved center.\nLine shaped like right-facing arrow,points move with mouse-x and warp shape.\nhorizontal line that hooks downward on the right and 13 5x5 ellipses along it.\nright curving line mid-right of canvas with 7 short lines radiating from it.',
+                  'stretched black s-shape in center with orange lines extending from end points.\nstretched black s-shape with 10 5x5 white ellipses along the shape.\nstretched black s-shape with 7 5x5 ellipses and orange lines along the shape.\nstretched black s-shape with 17 small orange lines extending from under shape.\nhorseshoe shape with orange ends facing left and black curved center.\nhorseshoe shape with orange ends facing left and black curved center.\nLine shaped like right-facing arrow,points draw with mouse-x and warp shape.\nhorizontal line that hooks downward on the right and 13 5x5 ellipses along it.\nright curving line mid-right of canvas with 7 short lines radiating from it.',
                 class: 'p5',
                 module: 'Shape',
                 submodule: 'Curves',
@@ -5605,7 +5605,7 @@
                   '\n<div>\n<code>\n// Move the mouse left and right to see the curve change\n\nfunction setup() {\n  createCanvas(100, 100);\n  noFill();\n}\n\nfunction draw() {\n  background(204);\n  let t = map(mouseX, 0, width, -5, 5);\n  curveTightness(t);\n  beginShape();\n  curveVertex(10, 26);\n  curveVertex(10, 26);\n  curveVertex(83, 24);\n  curveVertex(83, 61);\n  curveVertex(25, 65);\n  curveVertex(25, 65);\n  endShape();\n}\n</code>\n</div>'
                 ],
                 alt:
-                  'Line shaped like right-facing arrow,points move with mouse-x and warp shape.',
+                  'Line shaped like right-facing arrow,points draw with mouse-x and warp shape.',
                 class: 'p5',
                 module: 'Shape',
                 submodule: 'Curves'
@@ -7901,7 +7901,7 @@
                 file: 'src/core/p5.Element.js',
                 line: 674,
                 description:
-                  '<p>The .<a href="#/p5.Element/touchMoved">touchMoved()</a> function is called once after every time a touch move is\nregistered. This can be used to attach element specific event listeners.</p>\n',
+                  '<p>The .<a href="#/p5.Element/touchMoved">touchMoved()</a> function is called once after every time a touch draw is\nregistered. This can be used to attach element specific event listeners.</p>\n',
                 itemtype: 'method',
                 name: 'touchMoved',
                 params: [
@@ -9518,7 +9518,7 @@
                   }
                 ],
                 example: [
-                  '\n<div class="norender">\n<code>\n// Run this example on a mobile device\n// You will need to move the device incrementally further\n// the closer the square\'s color gets to white in order to change the value.\n\nlet value = 0;\nlet threshold = 0.5;\nfunction setup() {\n  setMoveThreshold(threshold);\n}\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction deviceMoved() {\n  value = value + 5;\n  threshold = threshold + 0.1;\n  if (value > 255) {\n    value = 0;\n    threshold = 30;\n  }\n  setMoveThreshold(threshold);\n}\n</code>\n</div>'
+                  '\n<div class="norender">\n<code>\n// Run this example on a mobile device\n// You will need to draw the device incrementally further\n// the closer the square\'s color gets to white in order to change the value.\n\nlet value = 0;\nlet threshold = 0.5;\nfunction setup() {\n  setMoveThreshold(threshold);\n}\nfunction draw() {\n  fill(value);\n  rect(25, 25, 50, 50);\n}\nfunction deviceMoved() {\n  value = value + 5;\n  threshold = threshold + 0.1;\n  if (value > 255) {\n    value = 0;\n    threshold = 30;\n  }\n  setMoveThreshold(threshold);\n}\n</code>\n</div>'
                 ],
                 alt:
                   '50x50 black rect in center of canvas. turns white on mobile when device moves',
@@ -9813,7 +9813,7 @@
                 type: 'Number',
                 readonly: '',
                 example: [
-                  "\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  const body = document.getElementsByTagName('body')[0];\n  myCanvas.parent(body);\n}\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the horizontal mouse position\n  //relative to the window\n  myCanvas.position(winMouseX + 1, windowHeight / 2);\n\n  //the y of the square is relative to the canvas\n  rect(20, mouseY, 60, 60);\n}\n</code>\n</div>"
+                  "\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  const body = document.getElementsByTagName('body')[0];\n  myCanvas.parent(body);\n}\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  //draw the canvas to the horizontal mouse position\n  //relative to the window\n  myCanvas.position(winMouseX + 1, windowHeight / 2);\n\n  //the y of the square is relative to the canvas\n  rect(20, mouseY, 60, 60);\n}\n</code>\n</div>"
                 ],
                 alt:
                   '60x60 black rect y moves with mouse y and fuchsia canvas moves with mouse x',
@@ -9831,7 +9831,7 @@
                 type: 'Number',
                 readonly: '',
                 example: [
-                  "\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  const body = document.getElementsByTagName('body')[0];\n  myCanvas.parent(body);\n}\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  //move the canvas to the vertical mouse position\n  //relative to the window\n  myCanvas.position(windowWidth / 2, winMouseY + 1);\n\n  //the x of the square is relative to the canvas\n  rect(mouseX, 20, 60, 60);\n}\n</code>\n</div>"
+                  "\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  const body = document.getElementsByTagName('body')[0];\n  myCanvas.parent(body);\n}\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n\n  //draw the canvas to the vertical mouse position\n  //relative to the window\n  myCanvas.position(windowWidth / 2, winMouseY + 1);\n\n  //the x of the square is relative to the canvas\n  rect(mouseX, 20, 60, 60);\n}\n</code>\n</div>"
                 ],
                 alt:
                   '60x60 black rect x moves with mouse x and fuchsia canvas y moves with mouse y',
@@ -9849,7 +9849,7 @@
                 type: 'Number',
                 readonly: '',
                 example: [
-                  '\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current x position is the horizontal mouse speed\n  let speed = abs(winMouseX - pwinMouseX);\n  //change the size of the box\n  //according to the horizontal speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>'
+                  '\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current x position is the horizontal mouse speed\n  let speed = abs(winMouseX - pwinMouseX);\n  //change the size of the box\n  //according to the horizontal speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //draw the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>'
                 ],
                 alt:
                   'fuchsia ellipse moves with mouse x and y. Grows and shrinks with mouse speed',
@@ -9867,7 +9867,7 @@
                 type: 'Number',
                 readonly: '',
                 example: [
-                  '\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current y position is the vertical mouse speed\n  let speed = abs(winMouseY - pwinMouseY);\n  //change the size of the box\n  //according to the vertical speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //move the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>'
+                  '\n<div>\n<code>\nlet myCanvas;\n\nfunction setup() {\n  //use a variable to store a pointer to the canvas\n  myCanvas = createCanvas(100, 100);\n  noStroke();\n  fill(237, 34, 93);\n}\n\nfunction draw() {\n  clear();\n  //the difference between previous and\n  //current y position is the vertical mouse speed\n  let speed = abs(winMouseY - pwinMouseY);\n  //change the size of the box\n  //according to the vertical speed\n  ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);\n  //draw the canvas to the mouse position\n  myCanvas.position(winMouseX + 1, winMouseY + 1);\n}\n</code>\n</div>'
                 ],
                 alt:
                   'fuchsia ellipse moves with mouse x and y. Grows and shrinks with mouse speed',
@@ -10071,7 +10071,7 @@
                   }
                 ],
                 example: [
-                  '\n<div>\n<code>\nlet pos = 25;\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  rect(25, pos, 50, 50);\n}\n\nfunction mouseWheel(event) {\n  print(event.delta);\n  //move the square according to the vertical scroll amount\n  pos += event.delta;\n  //uncomment to block page scrolling\n  //return false;\n}\n</code>\n</div>'
+                  '\n<div>\n<code>\nlet pos = 25;\n\nfunction draw() {\n  background(237, 34, 93);\n  fill(0);\n  rect(25, pos, 50, 50);\n}\n\nfunction mouseWheel(event) {\n  print(event.delta);\n  //draw the square according to the vertical scroll amount\n  pos += event.delta;\n  //uncomment to block page scrolling\n  //return false;\n}\n</code>\n</div>'
                 ],
                 alt:
                   'black 50x50 rect moves up and down with vertical scroll. fuchsia background',
@@ -10123,7 +10123,7 @@
                 file: 'src/events/touch.js',
                 line: 154,
                 description:
-                  '<p>The <a href="#/p5/touchMoved">touchMoved()</a> function is called every time a touch move is registered.\nIf no <a href="#/p5/touchMoved">touchMoved()</a> function is defined, the <a href="#/p5/mouseDragged">mouseDragged()</a> function will\nbe called instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add &quot;return false&quot;\nto the end of the method.</p>\n',
+                  '<p>The <a href="#/p5/touchMoved">touchMoved()</a> function is called every time a touch draw is registered.\nIf no <a href="#/p5/touchMoved">touchMoved()</a> function is defined, the <a href="#/p5/mouseDragged">mouseDragged()</a> function will\nbe called instead if it is defined.<br><br>\nBrowsers may have different default behaviors attached to various touch\nevents. To prevent any default behavior for this event, add &quot;return false&quot;\nto the end of the method.</p>\n',
                 itemtype: 'method',
                 name: 'touchMoved',
                 params: [
@@ -13867,7 +13867,7 @@
                   '\n<div><code>\nfunction draw() {\n  background(200);\n\n  let leftWall = 25;\n  let rightWall = 75;\n\n  // xm is just the mouseX, while\n  // xc is the mouseX, but constrained\n  // between the leftWall and rightWall!\n  let xm = mouseX;\n  let xc = constrain(mouseX, leftWall, rightWall);\n\n  // Draw the walls.\n  stroke(150);\n  line(leftWall, 0, leftWall, height);\n  line(rightWall, 0, rightWall, height);\n\n  // Draw xm and xc as circles.\n  noStroke();\n  fill(150);\n  ellipse(xm, 33, 9, 9); // Not Constrained\n  fill(0);\n  ellipse(xc, 66, 9, 9); // Constrained\n}\n</code></div>'
                 ],
                 alt:
-                  '2 vertical lines. 2 ellipses move with mouse X 1 does not move passed lines',
+                  '2 vertical lines. 2 ellipses draw with mouse X 1 does not draw passed lines',
                 class: 'p5',
                 module: 'Math',
                 submodule: 'Calculation'
@@ -14158,7 +14158,7 @@
                   '\n  <div><code>\nlet value = 25;\nlet m = map(value, 0, 100, 0, width);\nellipse(m, 50, 10, 10);\n</code></div>\n\n  <div><code>\nfunction setup() {\n  noStroke();\n}\n\nfunction draw() {\n  background(204);\n  let x1 = map(mouseX, 0, width, 25, 75);\n  ellipse(x1, 25, 25, 25);\n  //This ellipse is constrained to the 0-100 range\n  //after setting withinBounds to true\n  let x2 = map(mouseX, 0, width, 0, 100, true);\n  ellipse(x2, 75, 25, 25);\n}\n</code></div>'
                 ],
                 alt:
-                  '10 by 10 white ellipse with in mid left canvas\n2 25 by 25 white ellipses move with mouse x. Bottom has more range from X',
+                  '10 by 10 white ellipse with in mid left canvas\n2 25 by 25 white ellipses draw with mouse x. Bottom has more range from X',
                 class: 'p5',
                 module: 'Math',
                 submodule: 'Calculation'
@@ -18245,7 +18245,7 @@
                 file: 'src/webgl/interaction.js',
                 line: 13,
                 description:
-                  '<p>Allows movement around a 3D sketch using a mouse or trackpad.  Left-clicking\nand dragging will rotate the camera position about the center of the sketch,\nright-clicking and dragging will pan the camera position without rotation,\nand using the mouse wheel (scrolling) will move the camera closer or further\nfrom the center of the sketch. This function can be called with parameters\ndictating sensitivity to mouse movement along the X and Y axes.  Calling\nthis function without parameters is equivalent to calling orbitControl(1,1).\nTo reverse direction of movement in either axis, enter a negative number\nfor sensitivity.</p>\n',
+                  '<p>Allows movement around a 3D sketch using a mouse or trackpad.  Left-clicking\nand dragging will rotate the camera position about the center of the sketch,\nright-clicking and dragging will pan the camera position without rotation,\nand using the mouse wheel (scrolling) will draw the camera closer or further\nfrom the center of the sketch. This function can be called with parameters\ndictating sensitivity to mouse movement along the X and Y axes.  Calling\nthis function without parameters is equivalent to calling orbitControl(1,1).\nTo reverse direction of movement in either axis, enter a negative number\nfor sensitivity.</p>\n',
                 itemtype: 'method',
                 name: 'orbitControl',
                 params: [
@@ -18562,7 +18562,7 @@
                 name: 'directionalLight',
                 chainable: 1,
                 example: [
-                  '\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw() {\n  background(0);\n  //move your mouse to change light direction\n  let dirX = (mouseX / width - 0.5) * 2;\n  let dirY = (mouseY / height - 0.5) * 2;\n  directionalLight(250, 250, 250, -dirX, -dirY, -1);\n  noStroke();\n  sphere(40);\n}\n</code>\n</div>'
+                  '\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw() {\n  background(0);\n  //draw your mouse to change light direction\n  let dirX = (mouseX / width - 0.5) * 2;\n  let dirY = (mouseY / height - 0.5) * 2;\n  directionalLight(250, 250, 250, -dirX, -dirY, -1);\n  noStroke();\n  sphere(40);\n}\n</code>\n</div>'
                 ],
                 alt: 'light source on canvas changeable with mouse position',
                 class: 'p5',
@@ -18686,7 +18686,7 @@
                 name: 'pointLight',
                 chainable: 1,
                 example: [
-                  "\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw() {\n  background(0);\n  //move your mouse to change light position\n  let locX = mouseX - width / 2;\n  let locY = mouseY - height / 2;\n  // to set the light position,\n  // think of the world's coordinate as:\n  // -width/2,-height/2 -------- width/2,-height/2\n  //                |            |\n  //                |     0,0    |\n  //                |            |\n  // -width/2,height/2--------width/2,height/2\n  pointLight(250, 250, 250, locX, locY, 50);\n  noStroke();\n  sphere(40);\n}\n</code>\n</div>"
+                  "\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw() {\n  background(0);\n  //draw your mouse to change light position\n  let locX = mouseX - width / 2;\n  let locY = mouseY - height / 2;\n  // to set the light position,\n  // think of the world's coordinate as:\n  // -width/2,-height/2 -------- width/2,-height/2\n  //                |            |\n  //                |     0,0    |\n  //                |            |\n  // -width/2,height/2--------width/2,height/2\n  pointLight(250, 250, 250, locX, locY, 50);\n  noStroke();\n  sphere(40);\n}\n</code>\n</div>"
                 ],
                 alt: 'spot light on canvas changes position with mouse',
                 class: 'p5',
@@ -19425,7 +19425,7 @@
                 ],
                 chainable: 1,
                 example: [
-                  '\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw() {\n  background(204);\n  //move the camera away from the plane by a sin wave\n  camera(0, 0, 20 + sin(frameCount * 0.01) * 10, 0, 0, 0, 0, 1, 0);\n  plane(10, 10);\n}\n</code>\n</div>'
+                  '\n<div>\n<code>\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n}\nfunction draw() {\n  background(204);\n  //draw the camera away from the plane by a sin wave\n  camera(0, 0, 20 + sin(frameCount * 0.01) * 10, 0, 0, 0, 0, 1, 0);\n  plane(10, 10);\n}\n</code>\n</div>'
                 ],
                 alt: 'White square repeatedly grows to fill canvas and then shrinks.',
                 class: 'p5',
@@ -19471,7 +19471,7 @@
                   "\n<div>\n<code>\n//drag the mouse to look around!\n//you will see there's a vanishing point\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n  perspective(PI / 3.0, width / height, 0.1, 500);\n}\nfunction draw() {\n  background(200);\n  orbitControl();\n  normalMaterial();\n\n  rotateX(-0.3);\n  rotateY(-0.2);\n  translate(0, 0, -50);\n\n  push();\n  translate(-15, 0, sin(frameCount / 30) * 95);\n  box(30);\n  pop();\n  push();\n  translate(15, 0, sin(frameCount / 30 + PI) * 95);\n  box(30);\n  pop();\n}\n</code>\n</div>"
                 ],
                 alt:
-                  'two colored 3D boxes move back and forth, rotating as mouse is dragged.',
+                  'two colored 3D boxes draw back and forth, rotating as mouse is dragged.',
                 class: 'p5',
                 module: 'Lights, Camera',
                 submodule: 'Camera'
@@ -19526,7 +19526,7 @@
                   "\n<div>\n<code>\n//drag the mouse to look around!\n//there's no vanishing point\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n  ortho(-width / 2, width / 2, height / 2, -height / 2, 0, 500);\n}\nfunction draw() {\n  background(200);\n  orbitControl();\n  normalMaterial();\n\n  rotateX(0.2);\n  rotateY(-0.2);\n  push();\n  translate(-15, 0, sin(frameCount / 30) * 65);\n  box(30);\n  pop();\n  push();\n  translate(15, 0, sin(frameCount / 30 + PI) * 65);\n  box(30);\n  pop();\n}\n</code>\n</div>"
                 ],
                 alt:
-                  'two 3D boxes move back and forth along same plane, rotating as mouse is dragged.',
+                  'two 3D boxes draw back and forth along same plane, rotating as mouse is dragged.',
                 class: 'p5',
                 module: 'Lights, Camera',
                 submodule: 'Camera'
@@ -19669,26 +19669,26 @@
                   {
                     name: 'x',
                     description:
-                      '<p>amount to move along camera&#39;s left-right axis</p>\n',
+                      '<p>amount to draw along camera&#39;s left-right axis</p>\n',
                     type: 'Number'
                   },
                   {
                     name: 'y',
-                    description: '<p>amount to move along camera&#39;s up-down axis</p>\n',
+                    description: '<p>amount to draw along camera&#39;s up-down axis</p>\n',
                     type: 'Number'
                   },
                   {
                     name: 'z',
                     description:
-                      '<p>amount to move along camera&#39;s forward-backward axis</p>\n',
+                      '<p>amount to draw along camera&#39;s forward-backward axis</p>\n',
                     type: 'Number'
                   }
                 ],
                 example: [
-                  '\n<div>\n<code>\n// see the camera move along its own axes while maintaining its orientation\nlet cam;\nlet delta = 0.5;\n\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n  normalMaterial();\n  cam = createCamera();\n}\n\nfunction draw() {\n  background(200);\n\n  // move the camera along its local axes\n  cam.move(delta, delta, 0);\n\n  // every 100 frames, switch direction\n  if (frameCount % 150 === 0) {\n    delta *= -1;\n  }\n\n  translate(-10, -10, 0);\n  box(50, 8, 50);\n  translate(15, 15, 0);\n  box(50, 8, 50);\n  translate(15, 15, 0);\n  box(50, 8, 50);\n  translate(15, 15, 0);\n  box(50, 8, 50);\n  translate(15, 15, 0);\n  box(50, 8, 50);\n  translate(15, 15, 0);\n  box(50, 8, 50);\n}\n</code>\n</div>'
+                  '\n<div>\n<code>\n// see the camera draw along its own axes while maintaining its orientation\nlet cam;\nlet delta = 0.5;\n\nfunction setup() {\n  createCanvas(100, 100, WEBGL);\n  normalMaterial();\n  cam = createCamera();\n}\n\nfunction draw() {\n  background(200);\n\n  // draw the camera along its local axes\n  cam.draw(delta, delta, 0);\n\n  // every 100 frames, switch direction\n  if (frameCount % 150 === 0) {\n    delta *= -1;\n  }\n\n  translate(-10, -10, 0);\n  box(50, 8, 50);\n  translate(15, 15, 0);\n  box(50, 8, 50);\n  translate(15, 15, 0);\n  box(50, 8, 50);\n  translate(15, 15, 0);\n  box(50, 8, 50);\n  translate(15, 15, 0);\n  box(50, 8, 50);\n  translate(15, 15, 0);\n  box(50, 8, 50);\n}\n</code>\n</div>'
                 ],
                 alt:
-                  'camera view moves along a series of 3D boxes, maintaining the same\norientation throughout the move',
+                  'camera view moves along a series of 3D boxes, maintaining the same\norientation throughout the draw',
                 class: 'p5.Camera',
                 module: 'Lights, Camera',
                 submodule: 'Camera'
@@ -20249,7 +20249,7 @@
                   {
                     name: 'step',
                     description:
-                      '<p>step size for each tick of the slider (if step is set to 0, the slider will move continuously from the minimum to the maximum value)</p>\n',
+                      '<p>step size for each tick of the slider (if step is set to 0, the slider will draw continuously from the minimum to the maximum value)</p>\n',
                     type: 'Number',
                     optional: true
                   }
@@ -37289,7 +37289,7 @@
                       glyphIndexOffset =
                         idRangeOffsetParser.offset + idRangeOffsetParser.relativeOffset - 2;
 
-                      // Add the value of the idRangeOffset, which will move us into the glyphIndex array.
+                      // Add the value of the idRangeOffset, which will draw us into the glyphIndex array.
                       glyphIndexOffset += idRangeOffset;
 
                       // Then add the character index of the current segment, multiplied by 2 for USHORTs.
@@ -47502,7 +47502,7 @@
 	option (that is avoiding 0/0 divisions) is to weight the
 	original distance of the other point by the sum of both distances.
 
-	If the sum of both distances is 0, then move the point by the
+	If the sum of both distances is 0, then draw the point by the
 	arithmetic average of the movement of both reference points.
 
 
@@ -54648,7 +54648,7 @@
 
           // This is a lazily-defined list of p5 symbols that may be
           // misused by beginners at top-level code, outside of setup/draw. We'd like
-          // to detect these errors and help the user by suggesting they move them
+          // to detect these errors and help the user by suggesting they draw them
           // into setup/draw.
           //
           // For more details, see https://github.com/processing/p5.js/issues/1121.
@@ -54745,7 +54745,7 @@
                     (symbol.type === 'function' ? '() ' : ' ') +
                     symbol.type +
                     '? If so, you may want to ' +
-                    "move it into your sketch's setup() function.\n\n" +
+                    "draw it into your sketch's setup() function.\n\n" +
                     'For more details, see: ' +
                     FAQ_URL
                 );
@@ -56284,7 +56284,7 @@
           };
 
           /**
-           * The .<a href="#/p5.Element/touchMoved">touchMoved()</a> function is called once after every time a touch move is
+           * The .<a href="#/p5.Element/touchMoved">touchMoved()</a> function is called once after every time a touch draw is
            * registered. This can be used to attach element specific event listeners.
            *
            * @method touchMoved
@@ -59773,7 +59773,7 @@
            * stretched black s-shape with 17 small orange lines extending from under shape.
            * horseshoe shape with orange ends facing left and black curved center.
            * horseshoe shape with orange ends facing left and black curved center.
-           * Line shaped like right-facing arrow,points move with mouse-x and warp shape.
+           * Line shaped like right-facing arrow,points draw with mouse-x and warp shape.
            * horizontal line that hooks downward on the right and 13 5x5 ellipses along it.
            * right curving line mid-right of canvas with 7 short lines radiating from it.
            */
@@ -60156,7 +60156,7 @@
            * </div>
            *
            * @alt
-           * Line shaped like right-facing arrow,points move with mouse-x and warp shape.
+           * Line shaped like right-facing arrow,points draw with mouse-x and warp shape.
            */
           p5.prototype.curveTightness = function(t) {
             p5._validateParameters('curveTightness', arguments);
@@ -63640,7 +63640,7 @@
            * <div class="norender">
            * <code>
            * // Run this example on a mobile device
-           * // You will need to move the device incrementally further
+           * // You will need to draw the device incrementally further
            * // the closer the square's color gets to white in order to change the value.
            *
            * let value = 0;
@@ -64541,7 +64541,7 @@
            *   background(237, 34, 93);
            *   fill(0);
            *
-           *   //move the canvas to the horizontal mouse position
+           *   //draw the canvas to the horizontal mouse position
            *   //relative to the window
            *   myCanvas.position(winMouseX + 1, windowHeight / 2);
            *
@@ -64580,7 +64580,7 @@
            *   background(237, 34, 93);
            *   fill(0);
            *
-           *   //move the canvas to the vertical mouse position
+           *   //draw the canvas to the vertical mouse position
            *   //relative to the window
            *   myCanvas.position(windowWidth / 2, winMouseY + 1);
            *
@@ -64625,7 +64625,7 @@
            *   //change the size of the box
            *   //according to the horizontal speed
            *   ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);
-           *   //move the canvas to the mouse position
+           *   //draw the canvas to the mouse position
            *   myCanvas.position(winMouseX + 1, winMouseY + 1);
            * }
            * </code>
@@ -64667,7 +64667,7 @@
            *   //change the size of the box
            *   //according to the vertical speed
            *   ellipse(50, 50, 10 + speed * 5, 10 + speed * 5);
-           *   //move the canvas to the mouse position
+           *   //draw the canvas to the mouse position
            *   myCanvas.position(winMouseX + 1, winMouseY + 1);
            * }
            * </code>
@@ -65286,7 +65286,7 @@
            *
            * function mouseWheel(event) {
            *   print(event.delta);
-           *   //move the square according to the vertical scroll amount
+           *   //draw the square according to the vertical scroll amount
            *   pos += event.delta;
            *   //uncomment to block page scrolling
            *   //return false;
@@ -65470,7 +65470,7 @@
           };
 
           /**
-           * The <a href="#/p5/touchMoved">touchMoved()</a> function is called every time a touch move is registered.
+           * The <a href="#/p5/touchMoved">touchMoved()</a> function is called every time a touch draw is registered.
            * If no <a href="#/p5/touchMoved">touchMoved()</a> function is defined, the <a href="#/p5/mouseDragged">mouseDragged()</a> function will
            * be called instead if it is defined.<br><br>
            * Browsers may have different default behaviors attached to various touch
@@ -73222,7 +73222,7 @@
            * </code></div>
            *
            * @alt
-           * 2 vertical lines. 2 ellipses move with mouse X 1 does not move passed lines
+           * 2 vertical lines. 2 ellipses draw with mouse X 1 does not draw passed lines
            *
            */
           p5.prototype.constrain = function(n, low, high) {
@@ -73571,7 +73571,7 @@
     *
     * @alt
     * 10 by 10 white ellipse with in mid left canvas
-    * 2 25 by 25 white ellipses move with mouse x. Bottom has more range from X
+    * 2 25 by 25 white ellipses draw with mouse x. Bottom has more range from X
     *
     */
           p5.prototype.map = function(n, start1, stop1, start2, stop2, withinBounds) {
@@ -81653,7 +81653,7 @@
            * Allows movement around a 3D sketch using a mouse or trackpad.  Left-clicking
            * and dragging will rotate the camera position about the center of the sketch,
            * right-clicking and dragging will pan the camera position without rotation,
-           * and using the mouse wheel (scrolling) will move the camera closer or further
+           * and using the mouse wheel (scrolling) will draw the camera closer or further
            * from the center of the sketch. This function can be called with parameters
            * dictating sensitivity to mouse movement along the X and Y axes.  Calling
            * this function without parameters is equivalent to calling orbitControl(1,1).
@@ -81766,7 +81766,7 @@
                   local.y[2] /= ymag;
                 }
 
-                // move along those vectors by amount controlled by mouseX, pmouseY
+                // draw along those vectors by amount controlled by mouseX, pmouseY
                 var dx = -1 * sensitivityX * (this.mouseX - this.pmouseX);
                 var dz = -1 * sensitivityY * (this.mouseY - this.pmouseY);
 
@@ -82315,7 +82315,7 @@
            * }
            * function draw() {
            *   background(0);
-           *   //move your mouse to change light direction
+           *   //draw your mouse to change light direction
            *   let dirX = (mouseX / width - 0.5) * 2;
            *   let dirY = (mouseY / height - 0.5) * 2;
            *   directionalLight(250, 250, 250, -dirX, -dirY, -1);
@@ -82415,7 +82415,7 @@
            * }
            * function draw() {
            *   background(0);
-           *   //move your mouse to change light position
+           *   //draw your mouse to change light position
            *   let locX = mouseX - width / 2;
            *   let locY = mouseY - height / 2;
            *   // to set the light position,
@@ -84113,7 +84113,7 @@
            * }
            * function draw() {
            *   background(204);
-           *   //move the camera away from the plane by a sin wave
+           *   //draw the camera away from the plane by a sin wave
            *   camera(0, 0, 20 + sin(frameCount * 0.01) * 10, 0, 0, 0, 0, 1, 0);
            *   plane(10, 10);
            * }
@@ -84183,7 +84183,7 @@
            * </div>
            *
            * @alt
-           * two colored 3D boxes move back and forth, rotating as mouse is dragged.
+           * two colored 3D boxes draw back and forth, rotating as mouse is dragged.
            *
            */
           p5.prototype.perspective = function() {
@@ -84244,7 +84244,7 @@
            * </div>
            *
            * @alt
-           * two 3D boxes move back and forth along same plane, rotating as mouse is dragged.
+           * two 3D boxes draw back and forth along same plane, rotating as mouse is dragged.
            *
            */
           p5.prototype.ortho = function() {
@@ -84300,7 +84300,7 @@
            * system describe positions in terms of their relationship to the origin along
            * the X, Y and Z axes whereas the camera's 'local' coordinate system
            * describes positions from the camera's point of view: left-right, up-down,
-           * and forward-backward. The <a href="#/p5.Camera/move">move()</a> method,
+           * and forward-backward. The <a href="#/p5.Camera/draw">draw()</a> method,
            * for instance, moves the camera along its own axes, whereas the
            * <a href="#/p5.Camera/setPosition">setPosition()</a>
            * method sets the camera's position in world-space.
@@ -84524,7 +84524,7 @@
             var centerY = this.centerY;
             var centerZ = this.centerZ;
 
-            // move center by eye position such that rotation happens around eye position
+            // draw center by eye position such that rotation happens around eye position
             centerX -= this.eyeX;
             centerY -= this.eyeY;
             centerZ -= this.eyeZ;
@@ -84823,14 +84823,14 @@
 
           /**
            * Move camera along its local axes while maintaining current camera orientation.
-           * @method move
-           * @param {Number} x amount to move along camera's left-right axis
-           * @param {Number} y amount to move along camera's up-down axis
-           * @param {Number} z amount to move along camera's forward-backward axis
+           * @method draw
+           * @param {Number} x amount to draw along camera's left-right axis
+           * @param {Number} y amount to draw along camera's up-down axis
+           * @param {Number} z amount to draw along camera's forward-backward axis
            * @example
            * <div>
            * <code>
-           * // see the camera move along its own axes while maintaining its orientation
+           * // see the camera draw along its own axes while maintaining its orientation
            * let cam;
            * let delta = 0.5;
            *
@@ -84843,8 +84843,8 @@
            * function draw() {
            *   background(200);
            *
-           *   // move the camera along its local axes
-           *   cam.move(delta, delta, 0);
+           *   // draw the camera along its local axes
+           *   cam.draw(delta, delta, 0);
            *
            *   // every 100 frames, switch direction
            *   if (frameCount % 150 === 0) {
@@ -84869,9 +84869,9 @@
            *
            * @alt
            * camera view moves along a series of 3D boxes, maintaining the same
-           * orientation throughout the move
+           * orientation throughout the draw
            */
-          p5.Camera.prototype.move = function(x, y, z) {
+          p5.Camera.prototype.draw = function(x, y, z) {
             var local = this._getLocalAxes();
 
             // scale local axes by movement amounts
@@ -87057,7 +87057,7 @@
               lightingShader +
               '// include lighting.glgl\n\nuniform vec4 uMaterialColor;\nuniform sampler2D uSampler;\nuniform bool isTexture;\n\nvarying vec3 vNormal;\nvarying vec2 vTexCoord;\nvarying vec3 vViewPosition;\nvarying vec3 vAmbientColor;\n\nvoid main(void) {\n\n  vec3 diffuse;\n  vec3 specular;\n  totalLight(vViewPosition, normalize(vNormal), diffuse, specular);\n\n  gl_FragColor = isTexture ? texture2D(uSampler, vTexCoord) : uMaterialColor;\n  gl_FragColor.rgb = gl_FragColor.rgb * (diffuse + vAmbientColor) + specular;\n}',
             fontVert:
-              "precision mediump float;\n\nattribute vec3 aPosition;\nattribute vec2 aTexCoord;\nuniform mat4 uModelViewMatrix;\nuniform mat4 uProjectionMatrix;\n\nuniform vec4 uGlyphRect;\nuniform float uGlyphOffset;\n\nvarying vec2 vTexCoord;\nvarying float w;\n\nvoid main() {\n  vec4 positionVec4 = vec4(aPosition, 1.0);\n\n  // scale by the size of the glyph's rectangle\n  positionVec4.xy *= uGlyphRect.zw - uGlyphRect.xy;\n\n  // move to the corner of the glyph\n  positionVec4.xy += uGlyphRect.xy;\n\n  // move to the letter's line offset\n  positionVec4.x += uGlyphOffset;\n  \n  gl_Position = uProjectionMatrix * uModelViewMatrix * positionVec4;\n  vTexCoord = aTexCoord;\n  w = gl_Position.w;\n}\n",
+              "precision mediump float;\n\nattribute vec3 aPosition;\nattribute vec2 aTexCoord;\nuniform mat4 uModelViewMatrix;\nuniform mat4 uProjectionMatrix;\n\nuniform vec4 uGlyphRect;\nuniform float uGlyphOffset;\n\nvarying vec2 vTexCoord;\nvarying float w;\n\nvoid main() {\n  vec4 positionVec4 = vec4(aPosition, 1.0);\n\n  // scale by the size of the glyph's rectangle\n  positionVec4.xy *= uGlyphRect.zw - uGlyphRect.xy;\n\n  // draw to the corner of the glyph\n  positionVec4.xy += uGlyphRect.xy;\n\n  // draw to the letter's line offset\n  positionVec4.x += uGlyphOffset;\n  \n  gl_Position = uProjectionMatrix * uModelViewMatrix * positionVec4;\n  vTexCoord = aTexCoord;\n  w = gl_Position.w;\n}\n",
             fontFrag:
               "#extension GL_OES_standard_derivatives : enable\nprecision mediump float;\n\n#if 0\n  // simulate integer math using floats\n\t#define int float\n\t#define ivec2 vec2\n\t#define INT(x) float(x)\n\n\tint ifloor(float v) { return floor(v); }\n\tivec2 ifloor(vec2 v) { return floor(v); }\n\n#else\n  // use native integer math\n\tprecision highp int;\n\t#define INT(x) x\n\n\tint ifloor(float v) { return int(v); }\n\tint ifloor(int v) { return v; }\n\tivec2 ifloor(vec2 v) { return ivec2(v); }\n\n#endif\n\nuniform sampler2D uSamplerStrokes;\nuniform sampler2D uSamplerRowStrokes;\nuniform sampler2D uSamplerRows;\nuniform sampler2D uSamplerColStrokes;\nuniform sampler2D uSamplerCols;\n\nuniform ivec2 uStrokeImageSize;\nuniform ivec2 uCellsImageSize;\nuniform ivec2 uGridImageSize;\n\nuniform ivec2 uGridOffset;\nuniform ivec2 uGridSize;\nuniform vec4 uMaterialColor;\n\nvarying vec2 vTexCoord;\n\n// some helper functions\nint round(float v) { return ifloor(v + 0.5); }\nivec2 round(vec2 v) { return ifloor(v + 0.5); }\nfloat saturate(float v) { return clamp(v, 0.0, 1.0); }\nvec2 saturate(vec2 v) { return clamp(v, 0.0, 1.0); }\n\nint mul(float v1, int v2) {\n  return ifloor(v1 * float(v2));\n}\n\nivec2 mul(vec2 v1, ivec2 v2) {\n  return ifloor(v1 * vec2(v2) + 0.5);\n}\n\n// unpack a 16-bit integer from a float vec2\nint getInt16(vec2 v) {\n  ivec2 iv = round(v * 255.0);\n  return iv.x * INT(128) + iv.y;\n}\n\nvec2 pixelScale;\nvec2 coverage = vec2(0.0);\nvec2 weight = vec2(0.5);\nconst float minDistance = 1.0/8192.0;\nconst float hardness = 1.05; // amount of antialias\n\n// the maximum number of curves in a glyph\nconst int N = INT(250);\n\n// retrieves an indexed pixel from a sampler\nvec4 getTexel(sampler2D sampler, int pos, ivec2 size) {\n  int width = size.x;\n  int y = ifloor(pos / width);\n  int x = pos - y * width;  // pos % width\n\n  return texture2D(sampler, (vec2(x, y) + 0.5) / vec2(size));\n}\n\nvoid calulateCrossings(vec2 p0, vec2 p1, vec2 p2, out vec2 C1, out vec2 C2) {\n\n  // get the coefficients of the quadratic in t\n  vec2 a = p0 - p1 * 2.0 + p2;\n  vec2 b = p0 - p1;\n  vec2 c = p0 - vTexCoord;\n\n  // found out which values of 't' it crosses the axes\n  vec2 surd = sqrt(max(vec2(0.0), b * b - a * c));\n  vec2 t1 = ((b - surd) / a).yx;\n  vec2 t2 = ((b + surd) / a).yx;\n\n  // approximate straight lines to avoid rounding errors\n  if (abs(a.y) < 0.001)\n    t1.x = t2.x = c.y / (2.0 * b.y);\n\n  if (abs(a.x) < 0.001)\n    t1.y = t2.y = c.x / (2.0 * b.x);\n\n  // plug into quadratic formula to find the corrdinates of the crossings\n  C1 = ((a * t1 - b * 2.0) * t1 + c) * pixelScale;\n  C2 = ((a * t2 - b * 2.0) * t2 + c) * pixelScale;\n}\n\nvoid coverageX(vec2 p0, vec2 p1, vec2 p2) {\n\n  vec2 C1, C2;\n  calulateCrossings(p0, p1, p2, C1, C2);\n\n  // determine on which side of the x-axis the points lie\n  bool y0 = p0.y > vTexCoord.y;\n  bool y1 = p1.y > vTexCoord.y;\n  bool y2 = p2.y > vTexCoord.y;\n\n  // could web be under the curve (after t1)?\n  if (y1 ? !y2 : y0) {\n    // add the coverage for t1\n    coverage.x += saturate(C1.x + 0.5);\n    // calculate the anti-aliasing for t1\n    weight.x = min(weight.x, abs(C1.x));\n  }\n\n  // are we outside the curve (after t2)?\n  if (y1 ? !y0 : y2) {\n    // subtract the coverage for t2\n    coverage.x -= saturate(C2.x + 0.5);\n    // calculate the anti-aliasing for t2\n    weight.x = min(weight.x, abs(C2.x));\n  }\n}\n\n// this is essentially the same as coverageX, but with the axes swapped\nvoid coverageY(vec2 p0, vec2 p1, vec2 p2) {\n\n  vec2 C1, C2;\n  calulateCrossings(p0, p1, p2, C1, C2);\n\n  bool x0 = p0.x > vTexCoord.x;\n  bool x1 = p1.x > vTexCoord.x;\n  bool x2 = p2.x > vTexCoord.x;\n\n  if (x1 ? !x2 : x0) {\n    coverage.y -= saturate(C1.y + 0.5);\n    weight.y = min(weight.y, abs(C1.y));\n  }\n\n  if (x1 ? !x0 : x2) {\n    coverage.y += saturate(C2.y + 0.5);\n    weight.y = min(weight.y, abs(C2.y));\n  }\n}\n\nvoid main() {\n\n  // calculate the pixel scale based on screen-coordinates\n  pixelScale = hardness / fwidth(vTexCoord);\n\n  // which grid cell is this pixel in?\n  ivec2 gridCoord = ifloor(vTexCoord * vec2(uGridSize));\n\n  // intersect curves in this row\n  {\n    // the index into the row info bitmap\n    int rowIndex = gridCoord.y + uGridOffset.y;\n    // fetch the info texel\n    vec4 rowInfo = getTexel(uSamplerRows, rowIndex, uGridImageSize);\n    // unpack the rowInfo\n    int rowStrokeIndex = getInt16(rowInfo.xy);\n    int rowStrokeCount = getInt16(rowInfo.zw);\n\n    for (int iRowStroke = INT(0); iRowStroke < N; iRowStroke++) {\n      if (iRowStroke >= rowStrokeCount)\n        break;\n\n      // each stroke is made up of 3 points: the start and control point\n      // and the start of the next curve.\n      // fetch the indices of this pair of strokes:\n      vec4 strokeIndices = getTexel(uSamplerRowStrokes, rowStrokeIndex++, uCellsImageSize);\n\n      // unpack the stroke index\n      int strokePos = getInt16(strokeIndices.xy);\n\n      // fetch the two strokes\n      vec4 stroke0 = getTexel(uSamplerStrokes, strokePos + INT(0), uStrokeImageSize);\n      vec4 stroke1 = getTexel(uSamplerStrokes, strokePos + INT(1), uStrokeImageSize);\n\n      // calculate the coverage\n      coverageX(stroke0.xy, stroke0.zw, stroke1.xy);\n    }\n  }\n\n  // intersect curves in this column\n  {\n    int colIndex = gridCoord.x + uGridOffset.x;\n    vec4 colInfo = getTexel(uSamplerCols, colIndex, uGridImageSize);\n    int colStrokeIndex = getInt16(colInfo.xy);\n    int colStrokeCount = getInt16(colInfo.zw);\n    \n    for (int iColStroke = INT(0); iColStroke < N; iColStroke++) {\n      if (iColStroke >= colStrokeCount)\n        break;\n\n      vec4 strokeIndices = getTexel(uSamplerColStrokes, colStrokeIndex++, uCellsImageSize);\n\n      int strokePos = getInt16(strokeIndices.xy);\n      vec4 stroke0 = getTexel(uSamplerStrokes, strokePos + INT(0), uStrokeImageSize);\n      vec4 stroke1 = getTexel(uSamplerStrokes, strokePos + INT(1), uStrokeImageSize);\n      coverageY(stroke0.xy, stroke0.zw, stroke1.xy);\n    }\n  }\n\n  weight = saturate(1.0 - weight * 2.0);\n  float distance = max(weight.x + weight.y, minDistance); // manhattan approx.\n  float antialias = abs(dot(coverage, weight) / distance);\n  float cover = min(abs(coverage.x), abs(coverage.y));\n  gl_FragColor = uMaterialColor;\n  gl_FragColor.a *= saturate(max(antialias, cover));\n}",
             lineVert:
@@ -89374,7 +89374,7 @@
               }
 
               var index = imageInfo.index;
-              imageInfo.index += space; // move to the start of the next image
+              imageInfo.index += space; // draw to the start of the next image
               imageData._dirty = true;
               return { imageData: imageData, index: index };
             };
@@ -89768,7 +89768,7 @@
                 if (samePoint(x0, y0, x1, y1)) continue;
 
                 switch (cmd.type) {
-                  case 'M': // move
+                  case 'M': // draw
                     xs = x1;
                     ys = y1;
                     break;
@@ -89921,7 +89921,7 @@
               fontInfo = this._textFont._fontInfo = new FontInfo(font);
             }
 
-            // calculate the alignment and move/scale the view accordingly
+            // calculate the alignment and draw/scale the view accordingly
             var pos = this._textFont._handleAlignment(this, line, x, y);
             var fontSize = this._textSize;
             var scale = fontSize / font.unitsPerEm;

@@ -497,7 +497,7 @@
    * @param  {Number} min minimum value of the slider
    * @param  {Number} max maximum value of the slider
    * @param  {Number} [value] default value of the slider
-   * @param  {Number} [step] step size for each tick of the slider (if step is set to 0, the slider will move continuously from the minimum to the maximum value)
+   * @param  {Number} [step] step size for each tick of the slider (if step is set to 0, the slider will draw continuously from the minimum to the maximum value)
    * @return {p5.Element} pointer to <a href="#/p5.Element">p5.Element</a> holding created node
    * @example
    * <div><code>
