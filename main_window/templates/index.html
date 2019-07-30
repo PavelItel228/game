@@ -38,7 +38,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.js"></script>
 <script>
     console.log(window.location)
-    const socket_url = 'ws://' + window.location.host + window.location.pathname;
+    const socket_url = 'wss://' + window.location.host + window.location.pathname;
     let socket = new WebSocket(socket_url);
     let formData = $("#from");
 
