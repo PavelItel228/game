@@ -1,6 +1,6 @@
 var date = new Date();
 var myTank, opponentTank;
-var border_down_img, border_up_img, border_left_img, border_right_img;
+var border_down_img, border_up_img, border_left_img, border_right_img, tower_img, tank_img;
 var borders, border_group;
 var isCollide;
 
@@ -10,12 +10,15 @@ function preload() {
     border_up_img = loadImage("https://i.ibb.co/mXxmqwG/up.png");
     border_left_img = loadImage("https://i.ibb.co/W5cGnJ5/left.png");
     border_right_img = loadImage("https://i.ibb.co/1R8tMWP/right.png");
+    tower_img = loadImage("https://i.ibb.co/9NBp0dj/tower3.png");
+    tank_img = loadImage("https://i.ibb.co/gWzvtCp/tank-body.png");
+
 }
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
-    myTank = new Tank(0,0, [100, 255, 100]);
-    opponentTank = new Tank(0,0, [255, 100, 100]);
+    myTank = new Tank(0,0, [100, 255, 100], tower_img, tank_img);
+    opponentTank = new Tank(0,0, [255, 100, 100], tower_img, tank_img);
     borders = new createBorderBox(border_left_img,border_right_img,border_up_img,border_down_img);
     border_group = borders.group();
 
@@ -44,10 +47,14 @@ function drawTanks() {
     myTank.move();
     isCollide = false;
     myTank.sprite.collide(border_group, myTank.collision);
-    data1.setCords(-myTank.translation.x, -myTank.translation.y, myTank.rotationAngle);
+    data1.setCords(-myTank.translation.x, -myTank.translation.y, myTank.rotationAngle, myTank.tower.rotationAngle);
     opponentTank.sprite.position.x = width/2 + data2.x;
     opponentTank.sprite.position.y = height/2 + data2.y;
     opponentTank.rotationAngle = data2.angle;
     opponentTank.sprite.rotation = data2.angle;
+    opponentTank.tower.rotationAngle = data2.towerAngle;
+    opponentTank.tower.sprite.rotation= data2.towerAngle;
+    opponentTank.tower.sprite.position.x = width/2 + data2.x;
+    opponentTank.tower.sprite.position.y = height/2 + data2.y;
 }
 
