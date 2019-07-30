@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_heroku
 SECRET_KEY = 'hw6tz+ot*e8#2ix75^emkk%ta@id5x+grk95nk%6rlt7^i7@ss'
 
 
