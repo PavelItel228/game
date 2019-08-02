@@ -12,9 +12,11 @@ function Tank(x, y, col, tower_img, tank_img) {
     this.tower = new Tower(tower_img);
     this.xxx = 0;
     this.sendCords = function () {
-        chatSocket.send(JSON.stringify({
-            'message': [data1.x, data1.y, data1.angle, data1.towerAngle]
-        }));
+        if (chatSocket.readyState === 1) {
+            chatSocket.send(JSON.stringify({
+                'message': [data1.x, data1.y, data1.angle, data1.towerAngle]
+            }));
+        }
     };
 
     this.move = function () {
