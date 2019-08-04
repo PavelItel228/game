@@ -3299,7 +3299,7 @@
                   }
                 ],
                 example: [
-                  '\n<div><code>\nvar polySynth;\n\nfunction setup() {\n  var cnv = createCanvas(100, 100);\n  cnv.mousePressed(playSynth);\n\n  polySynth = new p5.PolySynth();\n\n  textAlign(CENTER);\n  text(\'click to play\', width/2, height/2);\n}\n\nfunction playSynth() {\n  // note duration (in seconds)\n  var dur = 1.5;\n\n  // time from now (in seconds)\n  var time = 0;\n\n  // velocity (volume, from 0 to 1)\n  var vel = 0.1;\n\n  // notes can overlap with each other\n  polySynth.play("G2", vel, 0, dur);\n  polySynth.play("C3", vel, time += 1/3, dur);\n  polySynth.play("G3", vel, time += 1/3, dur);\n\n  background(random(255), random(255), 255);\n  text(\'click to play\', width/2, height/2);\n}\n</code></div>'
+                  '\n<div><code>\nvar polySynth;\n\nfunction setup() {\n  var cnv = createCanvas(100, 100);\n  cnv.mousePressed(playSynth);\n\n  polySynth = new p5.PolySynth();\n\n  textAlign(CENTER);\n  text(\'click to play\', width/2, height/2);\n}\n\nfunction playSynth() {\n  // note duration (in seconds)\n  var dur = 1.5;\n\n  // time from now (in seconds)\n  var time = 0;\n\n  // velocity (volume, from 0 to 1)\n  var speed = 0.1;\n\n  // notes can overlap with each other\n  polySynth.play("G2", speed, 0, dur);\n  polySynth.play("C3", speed, time += 1/3, dur);\n  polySynth.play("G3", speed, time += 1/3, dur);\n\n  background(random(255), random(255), 255);\n  text(\'click to play\', width/2, height/2);\n}\n</code></div>'
                 ]
               },
               'p5.Distortion': {
@@ -26732,7 +26732,7 @@
                   }
                 ],
                 example: [
-                  '\n<div><code>\nvar polySynth;\n\nfunction setup() {\n  var cnv = createCanvas(100, 100);\n  cnv.mousePressed(playSynth);\n\n  polySynth = new p5.PolySynth();\n\n  textAlign(CENTER);\n  text(\'click to play\', width/2, height/2);\n}\n\nfunction playSynth() {\n  // note duration (in seconds)\n  var dur = 0.1;\n\n  // time from now (in seconds)\n  var time = 0;\n\n  // velocity (volume, from 0 to 1)\n  var vel = 0.1;\n\n  polySynth.play("G2", vel, 0, dur);\n  polySynth.play("C3", vel, 0, dur);\n  polySynth.play("G3", vel, 0, dur);\n\n  background(random(255), random(255), 255);\n  text(\'click to play\', width/2, height/2);\n}\n</code></div>'
+                  '\n<div><code>\nvar polySynth;\n\nfunction setup() {\n  var cnv = createCanvas(100, 100);\n  cnv.mousePressed(playSynth);\n\n  polySynth = new p5.PolySynth();\n\n  textAlign(CENTER);\n  text(\'click to play\', width/2, height/2);\n}\n\nfunction playSynth() {\n  // note duration (in seconds)\n  var dur = 0.1;\n\n  // time from now (in seconds)\n  var time = 0;\n\n  // velocity (volume, from 0 to 1)\n  var speed = 0.1;\n\n  polySynth.play("G2", speed, 0, dur);\n  polySynth.play("C3", speed, 0, dur);\n  polySynth.play("G3", speed, 0, dur);\n\n  background(random(255), random(255), 255);\n  text(\'click to play\', width/2, height/2);\n}\n</code></div>'
                 ],
                 class: 'p5.PolySynth',
                 module: 'p5.sound',

@@ -12393,12 +12393,12 @@ polysynth = function () {
   *    var time = 0;
   *
   *    // velocity (volume, from 0 to 1)
-  *    var vel = 0.1;
+  *    var speed = 0.1;
   *
   *    // notes can overlap with each other
-  *    polySynth.play("G2", vel, 0, dur);
-  *    polySynth.play("C3", vel, time += 1/3, dur);
-  *    polySynth.play("G3", vel, time += 1/3, dur);
+  *    polySynth.play("G2", speed, 0, dur);
+  *    polySynth.play("C3", speed, time += 1/3, dur);
+  *    polySynth.play("G3", speed, time += 1/3, dur);
   *
   *    background(random(255), random(255), 255);
   *    text('click to play', width/2, height/2);
@@ -12486,11 +12486,11 @@ polysynth = function () {
    *    var time = 0;
    *
    *    // velocity (volume, from 0 to 1)
-   *    var vel = 0.1;
+   *    var speed = 0.1;
    *
-   *    polySynth.play("G2", vel, 0, dur);
-   *    polySynth.play("C3", vel, 0, dur);
-   *    polySynth.play("G3", vel, 0, dur);
+   *    polySynth.play("G2", speed, 0, dur);
+   *    polySynth.play("C3", speed, 0, dur);
+   *    polySynth.play("G3", speed, 0, dur);
    *
    *    background(random(255), random(255), 255);
    *    text('click to play', width/2, height/2);
