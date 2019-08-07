@@ -4,9 +4,13 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -34,11 +38,11 @@
         <button id="chat-message-submit" type="submit" class="btn btn-primary">Send</button>
     </form>
 </div>
-<a href="http://localhost:8000/tanks_game/1/">Go to room 1 and test a game</a>
+<a href="/tanks_game/1/">Go to room 1 and test a game</a>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.js"></script>
 <script>
     console.log(window.location)
-    const socket_url = 'ws://' + window.location.host + window.location.pathname;
+    const socket_url = 'wss://' + window.location.host + window.location.pathname;
     let socket = new WebSocket(socket_url);
     let formData = $("#from");
 
@@ -46,6 +50,15 @@
         var val = $ta.val();
         if (val) {
             $ta.val(val + '\n' + text);
+        } else {
+            $ta.val(text);
+        }
+        $ta.scrollTop($ta[0].scrollHeight);
+    }
+    function addToTextareaOnline($ta, text) {
+        var val = $ta.val();
+        if (val) {
+            $ta.val(val + text);
         } else {
             $ta.val(text);
         }
@@ -68,10 +81,11 @@
             addToTextarea(textArea,chatData.user + ": " + chatData.text);
             console.log('send',event);
         }
+        // todo пофиксить баг с многимии окнами добавив проверку на вхождение  онлайн лист
         else if (chatData.type=== 'online' && $('#online').val().includes(chatData.user)!==true){
             console.log('online',event);
             const texti = $('#online');
-            texti.append(chatData.user+'\n');
+            addToTextareaOnline(texti,chatData.user+'\n');
         }
         else if (chatData.type === 'offline') {
             console.log('offline',event);
