@@ -1,5 +1,5 @@
-var data1 = new Data(0, 0, 0, 0);
-var data2 = new Data(0, 0, 0, 0);
+var data1 = new Data(0, 0, 0, 0, 0);
+var data2 = new Data(0, 0, 0, 0, 0);
 var chatSocket;
 
 function main() {
@@ -14,9 +14,10 @@ function main() {
     chatSocket.onmessage = function (e) {
         let data = JSON.parse(e.data);
         let message = data['message'];
-        data2.setCords(message[0], message[1], message[2], message[3]);
+        data2.setCords(message[0], message[1], message[2], message[3], message[4]);
 
         // console.log("Data received: " + data2.x + " " + data2.y + " " + data2.angle);
+        // console.log("Bullet data: " + data2.bullet);
     };
 
     chatSocket.onclose = function (e) {
