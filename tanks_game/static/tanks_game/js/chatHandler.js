@@ -6,7 +6,7 @@ function main() {
 
 
     var roomName = document.getElementById("data1").value;
-    chatSocket = new WebSocket(
+    chatSocket = new ReconnectingWebSocket(
         'wss://' + window.location.host +
         '/ws/tanks_game/' + roomName + '/');
 
