@@ -16,14 +16,23 @@ class GameConsumer(AsyncWebsocketConsumer):
         self.room_name = self.scope['url_route']['kwargs']['room_name']
         self.room_group_name = 'tanks_game_%s' % self.room_name
 
+        GameConsumer.Channels_data_base.append(self.channel_name)
+        if len(GameConsumer.Channels_data_base) == 1:
+            player_num = 1
+        else:
+            player_num = 2
         # Join room group
         await self.channel_layer.group_add(
             self.room_group_name,
             self.channel_name
         )
-
         await self.accept()
-        GameConsumer.Channels_data_base.append(self.channel_name)
+
+        channel_layer = get_channel_layer()
+        await channel_layer.send(self.channel_name, {
+            'type': 'setup',
+            'message': player_num,
+        })
 
     async def disconnect(self, close_code):
         # Leave room group
@@ -37,7 +46,6 @@ class GameConsumer(AsyncWebsocketConsumer):
     async def receive(self, text_data):
         text_data_json = json.loads(text_data)
         message = text_data_json['message']
-
         # Send message to room group
         # await self.channel_layer.group_send(
         #     self.room_group_name,
@@ -65,4 +73,13 @@ class GameConsumer(AsyncWebsocketConsumer):
         # Send message to WebSocket
         await self.send(text_data=json.dumps({
             'message': message,
+
+        }))
+
+    async def setup(self, event):
+        message = event['message']
+
+        # Send message to WebSocket
+        await self.send(text_data=json.dumps({
+            'setup': message,
         }))
