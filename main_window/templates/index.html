@@ -4,8 +4,7 @@
     <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
+    <script            src="https://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
             crossorigin="anonymous"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
@@ -49,11 +48,11 @@
         <button id="chat-message-submit" type="submit" class="btn btn-primary">Send</button>
     </form>
 </div>
-{#<a href="http://localhost:8000/tanks_game/1/">Go to room 1 and test a game</a>#}
+<a href="http://localhost:8000/tanks_game/1/">Go to room 1 and test a game</a>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reconnecting-websocket/1.0.0/reconnecting-websocket.js"></script>
 <script>
     console.log(window.location)
-    const socket_url = 'ws://' + window.location.host + window.location.pathname;
+    const socket_url = 'wss://' + window.location.host + window.location.pathname;
     let socket = new WebSocket(socket_url);
     let formData = $("#from");
 
@@ -66,7 +65,6 @@
         }
         $ta.scrollTop($ta[0].scrollHeight);
     }
-
     function addToTextareaOnline($ta, text) {
         var val = $ta.val();
         if (val) {
@@ -76,7 +74,6 @@
         }
         $ta.scrollTop($ta[0].scrollHeight);
     }
-
     socket.onopen = function (event) {
         console.log('socket open', event);
         formData.submit(function (e) {
@@ -101,6 +98,7 @@
             addToTextareaOnline(texti, chatData.user + '\n');
         } else if (chatData.type === 'offline') {
             console.log('offline', event);
+
             const texti = $('#online');
             val = texti.val().replace(chatData.user, "");
             val = val.replace('\n\n', '\n');
